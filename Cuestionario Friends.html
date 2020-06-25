@@ -30,13 +30,13 @@
 
 		<h2>Comenzamos?</h2>
 
-			<form action="TriviaFriends.php" method="get">
-				
+			<form action="TriviaFriends.php">
+				<!-- Pregunta1-->
 				<img src="preg1.png" alt="PreguntaNumero1"><br></br>
 				<label for="pregUno">1. Como se llama el prometido de Rachel que deja plantado en su boda? (sin opciones)</label>
 				<input type="text" name="pregUno" id="respUno" placeholder="Adivine aqui!"><br></br> <!-- Barry es el value correcto-->
 
-
+				<!-- Pregunta2-->
 				<img src="preg2.png" alt="PreguntaNumero2"><br>
 				<p>2. Con quien engania Ross a Rachel, mientras se estaban "dando un tiempo"?</p>
 				<input type="radio" id="respDosOpc1" name="respDos" value="incorrecta" />
@@ -51,15 +51,83 @@
 				<input type="radio" id="respDosOpc4" name="respDos" value="correcta" /> 
 				<label for="respDosOpc4">La chica de la Fotocopiadora</label><br></br>
 
-
+				<!-- Pregunta3-->
 				<img src="preg3.png" alt="PreguntaNumero3"><br>
-				<p>Marque el tilde si cree que la siguiente afirmacion es correcta:</p>
-				<label for="respTres">Rachel envia a Ross una carta de 16 paginas.</label>
-				<input type="checkbox" id="respTres" name="respTres" value="correcta">
+				<p>3. Marque el tilde si cree que la siguiente afirmacion es CORRECTA:</p>
+				<label for="respTres">Rachel envia a Ross una carta de 16 paginas</label>
+				<input type="checkbox" id="respTres" name="respTres" value="incorrecta"><br></br>
+
+				<!-- Pregunta4-->
+				<img src="preg4.png" alt="PreguntaNumero4"><br>
+				<p>4. Seleccione la opcion correcta de la Lista: </p>
+				<select name="respCuatro" id="respCuatro">
+					<option value="incorrecta" selected>Un Televisor</option>
+					<option value="correcta">Un Sillon</option>
+					<option value="incorrecta">Una novia de Chandler</option>
+					<option value="incorrecta">Una de las hermanas de Joey</option>
+				</select><br></br>
+
+
+				<!-- Pregunta5-->
+				<img src="preg5.png" alt="PreguntaNumero5"><br>
+				<p>5. Que fue lo que mas le dolio perder a Ross cuando Phoebe lo asalto y le robo un salveque?</p>
+				<input type="radio" id="respCincoOpc1" name="respCinco" value="correcta" />
+				<label for="respCincoOpc1">Una Historieta</label><br>
+
+				<input type="radio" id="respCincoOpc2" name="respCinco" value="incorrecta" />
+				<label for="respCincoOpc2">Un Dinosaurio</label><br>
+
+				<input type="radio" id="respCincoOpc3" name="respCinco" value="incorrecta" />
+				<label for="respCincoOpc3">Un Reloj</label><br>
+
+				<input type="radio" id="respCincoOpc4" name="respCinco" value="incorrecta" /> 
+				<label for="respCincoOpc4">Una Fotografia</label><br></br>
+
+
+
+				<!-- Pregunta6-->
+				<img src="preg6.png" alt="PreguntaNumero6"><br>
+				<p>Marque el tilde si cree que la siguiente afirmacion es INCORRECTA:</p>
+				<label for="respSeis">6. El nombre falso que utiliza Phoebe es "Regina Falange"</label>
+				<input type="checkbox" id="respTres" name="respTres" value="incorrecta"><br></br>
+
+				<!-- Pregunta7-->
+				<img src="preg7.png" alt="PreguntaNumero7"><br></br>
+				<label for="pregSiete">7. A que fruta es alergico Ross? (sin opciones)</label>
+				<input type="text" name="pregSiete" id="respSiete" placeholder="Adivine aqui!"><br></br><!--respuesta correcta es Kiwi -->
+
+
+
+				<!-- Pregunta8-->
+				<img src="preg8.png" alt="PreguntaNumero8"><br>
+				<p>8. Seleccione la opcion correcta de la Lista: </p>
+				<select name="respOcho" id="respOcho">
+					<option value="incorrecta" selected>Estados Unidos</option>
+					<option value="incorrecta">Tailandia</option>
+					<option value="incorrecta">Argentina</option>
+					<option value="correcta">Yemen</option>
+				</select><br></br>
+
+
+				<!-- Pregunta-->
+
+					
+
+				<!-- Pregunta6-->
+
+
+
+				<!-- Pregunta6-->
+
+
+
+				<!-- Pregunta6-->
 
 
 
 
+
+				<input type="submit" value="Finalizar Cuestionario">
 			</form>
 
 			
