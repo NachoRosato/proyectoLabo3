@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 
+	<html lang="es">
+
 
 	<head>
+		<meta charset="UTF-8" /> <!--me lloraba el validor y esta fue la solucion que encontre en san google -->
+
 
 		<title>TRIVIA de F.R.I.E.N.D.S</title>
 			<style>
 
 				body, form{
 
-					background: #FFFFCC;
+					background: #FFFFCC;		
 					text-align: center;
 					font-family: Arial;
 					font-size: 15px;
@@ -24,11 +28,37 @@
 				img{
 					border: 1px solid #00F7FF; 
 				  	width: 794px; height: 533px;
+				  	margin-top: 30px;
+				  	margin-bottom: 30px;
 				}
 
 				img:hover{
 					
-					box-shadow: 2px 2px 10px #FF0000; 
+					box-shadow: 3px 3px 10px #FF0000; 
+				}
+
+				h2,h1.titulosPrincipales{
+
+					text-decoration-line: underline;
+					text-align: center;
+				}
+
+				h3{
+					font-size: 40px;
+					margin-top: 70px;
+					text-shadow: 4px 4px 4px #FFCCB3;
+				}
+
+				#margReglas{
+
+					margin-top: 50px;
+					margin-bottom: 30px;
+				}
+
+				p.margReglas{
+
+					margin-top: 40px;
+					margin-bottom: 50px;
 				}
 
 			    .alinearVin{
@@ -44,15 +74,33 @@
                 list-style: octal;                
 	            }
 
-			
-				h2,h1.titulosPrincipales{
 
-					text-decoration-line: underline;
-					text-align: center;
+				div.alinearRadio{
+
+					text-align: left;
+					display: inline-block;
+					
+				}
+
+				input[type=submit]{
+
+					background-color: #92EEFE;
+					outline: 4px outset #00B4D3;
+					outline-offset: 0px;
+					border: none;
+					font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+					font-size: 20px;
+					font-weight: 700; 
+					color: #FFFFFF;
+					padding: 16px 32px;
+					text-decoration: none;
+					cursor: pointer;
+					margin: 40px 30px;
+					
 				}
 
 			</style>
-
+			
 	</head>
 
 
@@ -62,7 +110,7 @@
 		<h1 class="titulosPrincipales">Realmente, eres un FAN de la serie F.R.I.E.N.D.S?</h1>
 		
 			<p><em>Enterate aqui, respondiendo las preguntas de esta Entrenida Trivia! </em></p>
-
+		<div id="margReglas">
 		<h2>Reglas:</h2>
 			
 			<ul class="alinearVin">
@@ -72,54 +120,60 @@
 				<li>Las incorrectas se mostraran con un color rojo y las correctas con un color turquesa, caracteristicos del logo de la serie.</li>
 
 			</ul>
+		</div>
 			
+			<p class="margReglas"><em>A&uacute;n no viste la serie?</em>  <a href="https://www.netflix.com/ar/title/70153404">Visita Netflix!</a></p>
 
-			<p><em>A&uacute;n no viste la serie?</em>  <a href="https://www.netflix.com/ar/title/70153404">Visita Netflix!</a></p>
-
-		<h2>¿Comenzamos?</h2>
+		<h3>¿Comenzamos?</h3>
 
 			<form action="TriviaFriends.php">
 				<!-- Pregunta1-->
-				<img src="preg1.png" alt="PreguntaNumero1"><br></br>
-				<label for="pregUno">1. ¿C&oacute;mo se llama el prometido de Rachel, que deja plantado en su boda? (sin opciones)</label>
-				<input type="text" name="pregUno" id="respUno" placeholder="Adivine aqu&iacute;!"><br></br> <!-- Barry es el value correcto-->
+				<img src="preg1.png" alt="PreguntaNumero1"><br>
+				<label id="pregUno">1. ¿C&oacute;mo se llama el prometido de Rachel, que deja plantado en su boda? (sin opciones)
+					
+					<input type="text" name="pregUno" id="respUno" placeholder="Adivine aqu&iacute;!"><br><!-- Barry es el value correcto-->
+					
+				</label>
+				
 
 				<!-- Pregunta2-->
-				<img src="preg2.png" alt="PreguntaNumero2"><br>
+				<img src="preg2.png" alt="PreguntaNumero2">
 				<p>2. ¿Con qui&eacute;n enga&ntilde;a Ross a Rachel, mientras se estaban "dando un tiempo"?</p>
 				<div class="alinearRadio">
-				<input type="radio" id="respDosOpc1" name="respDos" value="incorrecta" />
-				<label for="respDosOpc1">La chica del Gimansio</label><br>
+					<input type="radio" id="respDosOpc1" name="respDos" value="incorrecta" />
+					<label for="respDosOpc1">La chica del Gimansio</label><br>
 
-				<input type="radio" id="respDosOpc2" name="respDos" value="incorrecta" />
-				<label for="respDosOpc2">Una Nudista</label><br>
+					<input type="radio" id="respDosOpc2" name="respDos" value="incorrecta" />
+					<label for="respDosOpc2">Una Nudista</label><br>
 
-				<input type="radio" id="respDosOpc3" name="respDos" value="incorrecta" />
-				<label for="respDosOpc3">Una chica de un Club Nocturno</label><br>
+					<input type="radio" id="respDosOpc3" name="respDos" value="incorrecta" />
+					<label for="respDosOpc3">Una chica de un Club Nocturno</label><br>
 
-				<input type="radio" id="respDosOpc4" name="respDos" value="correcta" /> 
-				<label for="respDosOpc4">La chica de la Fotocopiadora</label><br></br>
+					<input type="radio" id="respDosOpc4" name="respDos" value="correcta" /> 
+					<label for="respDosOpc4">La chica de la Fotocopiadora</label><br>
 				</div>
+				<div style="clear: both"></div>
 
 				<!-- Pregunta3-->
 				<img src="preg3.png" alt="PreguntaNumero3"><br>
 				<p>3. Marque el t&iacute;lde si cree que la siguiente afirmaci&oacute;n es CORRECTA:</p>
 				<label for="respTres">Rachel envia a Ross una carta de 16 p&aacute;ginas</label>
-				<input type="checkbox" id="respTres" name="respTres" value="incorrecta"><br></br>
+				<input type="checkbox" id="respTres" name="respTres" value="incorrecta"><br>
 
 				<!-- Pregunta4-->
 				<img src="preg4.png" alt="PreguntaNumero4"><br>
 				<p>4. ¿Qui&eacute;n es "Rosita"? Seleccione la opci&oacute;n correcta de la Lista: </p>
-				<select name="respCuatro" id="respCuatro">
+				<select name="respCuatro">
 					<option value="incorrecta" selected>Un Televisor</option>
 					<option id="respCuatro" value="correcta">Un Sill&oacute;n</option>
 					<option value="incorrecta">Una de las hermanas de Joey</option>
-				</select><br></br>
+				</select><br>
 
 
 				<!-- Pregunta5-->
 				<img src="preg5.png" alt="PreguntaNumero5"><br>
 				<p>5. ¿Qu&eacute; fue lo que m&aacute;s le doli&oacute; perder a Ross cuando Phoebe lo asalt&oacute; y le rob&oacute; un salveque?</p>
+				<div class="alinearRadio">
 				<input type="radio" id="respCincoOpc1" name="respCinco" value="correcta" />
 				<label for="respCincoOpc1">Una Historieta</label><br>
 
@@ -130,7 +184,9 @@
 				<label for="respCincoOpc3">Un Reloj</label><br>
 
 				<input type="radio" id="respCincoOpc4" name="respCinco" value="incorrecta" /> 
-				<label for="respCincoOpc4">Una Fotograf&iacute;a</label><br></br>
+				<label for="respCincoOpc4">Una Fotograf&iacute;a</label><br>
+				</div>
+				<div style="clear: both"></div>
 
 
 
@@ -138,50 +194,48 @@
 				<img src="preg6.png" alt="PreguntaNumero6"><br>
 				<p>6. Marque el t&iacute;lde, si cree que la siguiente afirmaci&oacute;n es INCORRECTA:</p>
 				<label for="respSeis">El nombre falso que utiliza Phoebe es "Regina Falange"</label>
-				<input type="checkbox" id="respSeis" name="respSeis" value="incorrecta"><br></br>
+				<input type="checkbox" id="respSeis" name="respSeis" value="incorrecta"><br>
 
 				<!-- Pregunta7-->
-				<img src="preg7.png" alt="PreguntaNumero7"><br></br>
-				<label for="pregSiete">7. A qu&eacute; fruta es alergico Ross? (sin opciones)</label>
-				<input type="text" name="pregSiete" id="respSiete" placeholder="Adivine aqu&iacute;!"><br></br><!--respuesta correcta es Kiwi -->
+				<img src="preg7.png" alt="PreguntaNumero7"><br>
+				<label id="pregSiete">7. A qu&eacute; fruta es alergico Ross? (sin opciones)
+					<input type="text" name="pregSiete" id="respSiete" placeholder="Adivine aqu&iacute;!"><!--respuesta correcta es Kiwi -->
+				</label><br>
+				
 
 
 
 				<!-- Pregunta8-->
 				<img src="preg8.png" alt="PreguntaNumero8"><br>
 				<p>8. ¿A qu&eacute; pa&iacute;s se va a vivir Chandler para terminar con Janice? Seleccione la opci&oacute;n correcta de la Lista: </p>
-				<select name="respOcho" id="respOcho">
+				<select name="respOcho">
 					<option value="incorrecta" selected>Estados Unidos</option>
 					<option value="incorrecta">Tailandia</option>
 					<option value="incorrecta">Argentina</option>
 					<option id="respOcho" value="correcta">Yemen</option>
-				</select><br></br>
+				</select><br>
 
 
 				<!-- Pregunta9-->
-				<img src="preg9.png" alt="PreguntaNumero9"><br></br>
-				<label for="pregNueve">9. ¿En d&oacute;nde pasa Rachel la luna de miel de Ross?<br>
-					<div class="alinearVinPreg">
-					<ul>
-					<li>Francia</li>
-					<li>Holanda</li>
-					<li>Grecia</li>
-					</ul>
-					</div>
-				</label>
-				<input type="text" name="pregNueve" id="respNueve" placeholder="Adivine aqu&iacute;!"><br></br><!-- Grecia es la respuesta correcta-->
+				<img src="preg9.png" alt="PreguntaNumero9"><br>
+				<div class="alinearVinPreg">
+					<label id="pregNueve">9. ¿En d&oacute;nde pasa Rachel la luna de miel de Ross?
+						<input type="text" name="pregNueve" id="respNueve" placeholder="Adivine aqu&iacute;!"><br><!-- Grecia es la respuesta correcta--><br>
+					</label>
+				</div><br>
 					
 
 				<!-- Pregunta10-->
 				<img src="preg10.png" alt="PreguntaNumeroDiez"><br>
 				<p>10. Marque el t&iacute;lde, si cree que la siguiente afirmaci&oacute;n es CORRECTA:</p>
 				<label for="respDiez">El primer beso de M&oacute;nica fue su hermano, Ross.</label>
-				<input type="checkbox" id="respDiez" name="respDiez" value="correcta"><br></br>
+				<input type="checkbox" id="respDiez" name="respDiez" value="correcta"><br>
 
 
 				<!-- Pregunta11-->
 				<img src="preg11.png" alt="PreguntaNumeroOnce"><br>
 				<p>11. ¿Cu&aacute;l es el libro que Joey pone en el congelador cada vez que lo lee?</p>
+				<div class="alinearRadio">
 				<input type="radio" id="respOnceOpc1" name="respOnce" value="incorrecta" />
 				<label for="respOnceOpc1">Mujercitas</label><br>
 
@@ -192,23 +246,26 @@
 				<label for="respOnceOpc3">El Resplandor</label><br>
 
 				<input type="radio" id="respOnceOpc4" name="respOnce" value="incorrecta" /> 
-				<label for="respOnceOpc4">La Cosa</label><br></br>
- 
+				<label for="respOnceOpc4">La Cosa</label><br>
+				</div>
+				<div style="clear: both"></div> 
 
 				<!-- Pregunta12-->
 				<img src="preg12.png" alt="PreguntaNumero12"><br>
 				<p>12. ¿Cu&aacute;l de los seis amigos no sabe andar en Bicicleta? Seleccione la opci&oacute;n correcta de la Lista: </p>
-				<select name="respDoce" id="respDoce">
+				<select name="respDoce">
 					<option value="incorrecta">Chandler</option>
 					<option value="incorrecta">Joey</option>
 					<option value="incorrecta">Monica</option>
-					<option id="respOcho" value="correcta" selected>Phoebe</option>
+					<option id="respDoce" value="correcta" selected>Phoebe</option>
 					<option value="incorrecta">Ross</option>
 					<option value="incorrecta">Rachel</option>
-				</select><br></br>
+				</select><br>
+
+				
+				<p class="submitFinal"><input type="submit" value="Finalizar Cuestionario"></p>
 
 
-				<input type="submit" value="Finalizar Cuestionario">
 			</form>
 
 			
