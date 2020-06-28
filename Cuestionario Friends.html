@@ -20,6 +20,11 @@
 					/*border: 1px solid black;*/
 				}
 
+				form{
+
+					font-size: 18px;
+				}
+
 				/*p, h1, h2, ul{
 
 					border: 1px solid black;
@@ -28,7 +33,7 @@
 				img{
 					border: 1px solid #00F7FF; 
 				  	width: 794px; height: 533px;
-				  	margin-top: 30px;
+				  	margin-top: 40px;
 				  	margin-bottom: 30px;
 				}
 
@@ -82,7 +87,7 @@
 					
 				}
 
-				input[type=submit]{
+				input[type=button]{
 
 					background-color: #92EEFE;
 					outline: 4px outset #00B4D3;
@@ -99,7 +104,10 @@
 					
 				}
 
+
+
 			</style>
+
 			
 	</head>
 
@@ -115,7 +123,7 @@
 			
 			<ul class="alinearVin">
 				
-				<li>En un total de 12 preguntas podrias obtener un total de 1200 puntos.</li>
+				<li>En un total de 12 preguntas, podrias obtener 1200 puntos.</li>
 				<li>Una vez realizada la trivia se mostraran las preguntas correctas e incorrectas y la totalidad de los puntos obetenidos.</li>
 				<li>Las incorrectas se mostraran con un color rojo y las correctas con un color turquesa, caracteristicos del logo de la serie.</li>
 
@@ -126,10 +134,10 @@
 
 		<h3>¿Comenzamos?</h3>
 
-			<form action="TriviaFriends.php">
+			<form action="TriviaFriends.php" id="formuFriends">
 				<!-- Pregunta1-->
 				<img src="preg1.png" alt="PreguntaNumero1"><br>
-				<label id="pregUno">1. ¿C&oacute;mo se llama el prometido de Rachel, que deja plantado en su boda? (sin opciones)
+				<label id="pregUno">1. ¿C&oacute;mo se llama el prometido de Rachel, que deja plantado en su boda?
 					
 					<input type="text" name="pregUno" id="respUno" placeholder="Adivine aqu&iacute;!"><br><!-- Barry es el value correcto-->
 					
@@ -138,15 +146,15 @@
 
 				<!-- Pregunta2-->
 				<img src="preg2.png" alt="PreguntaNumero2">
-				<p>2. ¿Con qui&eacute;n enga&ntilde;a Ross a Rachel, mientras se estaban "dando un tiempo"?</p>
+				<p><span id="pregDos">2. ¿Con qui&eacute;n enga&ntilde;a Ross a Rachel, mientras se estaban "dando un tiempo"?</span></p>
 				<div class="alinearRadio">
-					<input type="radio" id="respDosOpc1" name="respDos" value="incorrecta" />
+					<input type="radio" name="respDos" value="incorrecta" />
 					<label for="respDosOpc1">La chica del Gimansio</label><br>
 
-					<input type="radio" id="respDosOpc2" name="respDos" value="incorrecta" />
+					<input type="radio" name="respDos" value="incorrecta" />
 					<label for="respDosOpc2">Una Nudista</label><br>
 
-					<input type="radio" id="respDosOpc3" name="respDos" value="incorrecta" />
+					<input type="radio" name="respDos" value="incorrecta" />
 					<label for="respDosOpc3">Una chica de un Club Nocturno</label><br>
 
 					<input type="radio" id="respDosOpc4" name="respDos" value="correcta" /> 
@@ -156,13 +164,13 @@
 
 				<!-- Pregunta3-->
 				<img src="preg3.png" alt="PreguntaNumero3"><br>
-				<p>3. Marque el t&iacute;lde si cree que la siguiente afirmaci&oacute;n es CORRECTA:</p>
-				<label for="respTres">Rachel envia a Ross una carta de 16 p&aacute;ginas</label>
+				<p><span id="pregTres">3. Marque el t&iacute;lde si cree que la siguiente afirmaci&oacute;n es INCORRECTA:</span></p>
+				<label for="respTres" id="pregTresOpc">Rachel envia a Ross una carta de 16 p&aacute;ginas</label>
 				<input type="checkbox" id="respTres" name="respTres" value="incorrecta"><br>
 
 				<!-- Pregunta4-->
 				<img src="preg4.png" alt="PreguntaNumero4"><br>
-				<p>4. ¿Qui&eacute;n es "Rosita"? Seleccione la opci&oacute;n correcta de la Lista: </p>
+				<p><span  id="pregCuatro">4. ¿Qui&eacute;n es "Rosita"? Seleccione la opci&oacute;n correcta de la Lista:</span></p>
 				<select name="respCuatro">
 					<option value="incorrecta" selected>Un Televisor</option>
 					<option id="respCuatro" value="correcta">Un Sill&oacute;n</option>
@@ -172,18 +180,18 @@
 
 				<!-- Pregunta5-->
 				<img src="preg5.png" alt="PreguntaNumero5"><br>
-				<p>5. ¿Qu&eacute; fue lo que m&aacute;s le doli&oacute; perder a Ross cuando Phoebe lo asalt&oacute; y le rob&oacute; un salveque?</p>
+				<p><span id="pregCinco">5. ¿Qu&eacute; fue lo que m&aacute;s le doli&oacute; perder a Ross cuando Phoebe lo asalt&oacute; y le rob&oacute; un salveque?</span></p>
 				<div class="alinearRadio">
 				<input type="radio" id="respCincoOpc1" name="respCinco" value="correcta" />
 				<label for="respCincoOpc1">Una Historieta</label><br>
 
-				<input type="radio" id="respCincoOpc2" name="respCinco" value="incorrecta" />
+				<input type="radio" name="respCinco" value="incorrecta" />
 				<label for="respCincoOpc2">Un Dinosaurio</label><br>
 
-				<input type="radio" id="respCincoOpc3" name="respCinco" value="incorrecta" />
+				<input type="radio" name="respCinco" value="incorrecta" />
 				<label for="respCincoOpc3">Un Reloj</label><br>
 
-				<input type="radio" id="respCincoOpc4" name="respCinco" value="incorrecta" /> 
+				<input type="radio" name="respCinco" value="incorrecta" /> 
 				<label for="respCincoOpc4">Una Fotograf&iacute;a</label><br>
 				</div>
 				<div style="clear: both"></div>
@@ -192,8 +200,8 @@
 
 				<!-- Pregunta6-->
 				<img src="preg6.png" alt="PreguntaNumero6"><br>
-				<p>6. Marque el t&iacute;lde, si cree que la siguiente afirmaci&oacute;n es INCORRECTA:</p>
-				<label for="respSeis">El nombre falso que utiliza Phoebe es "Regina Falange"</label>
+				<p><span id="pregSeis">6. Marque el t&iacute;lde, si cree que la siguiente afirmaci&oacute;n es CORRECTA:</span></p>
+				<label for="respSeis" id="pregSeisOpc">El nombre falso que utiliza Phoebe es "Regina Falange"</label>
 				<input type="checkbox" id="respSeis" name="respSeis" value="incorrecta"><br>
 
 				<!-- Pregunta7-->
@@ -207,7 +215,7 @@
 
 				<!-- Pregunta8-->
 				<img src="preg8.png" alt="PreguntaNumero8"><br>
-				<p>8. ¿A qu&eacute; pa&iacute;s se va a vivir Chandler para terminar con Janice? Seleccione la opci&oacute;n correcta de la Lista: </p>
+				<p><span  id="pregOcho">8. ¿A qu&eacute; pa&iacute;s se va a vivir Chandler para terminar con Janice? Seleccione la opci&oacute;n correcta de la Lista:</span></p>
 				<select name="respOcho">
 					<option value="incorrecta" selected>Estados Unidos</option>
 					<option value="incorrecta">Tailandia</option>
@@ -227,46 +235,280 @@
 
 				<!-- Pregunta10-->
 				<img src="preg10.png" alt="PreguntaNumeroDiez"><br>
-				<p>10. Marque el t&iacute;lde, si cree que la siguiente afirmaci&oacute;n es CORRECTA:</p>
-				<label for="respDiez">El primer beso de M&oacute;nica fue su hermano, Ross.</label>
+				<p><span id="pregDiez">10. Marque el t&iacute;lde, si cree que la siguiente afirmaci&oacute;n es CORRECTA:</span></p>
+				<label for="respDiez" id="pregDiezOpc">El primer beso de M&oacute;nica fue su hermano, Ross.</label>
 				<input type="checkbox" id="respDiez" name="respDiez" value="correcta"><br>
 
 
 				<!-- Pregunta11-->
 				<img src="preg11.png" alt="PreguntaNumeroOnce"><br>
-				<p>11. ¿Cu&aacute;l es el libro que Joey pone en el congelador cada vez que lo lee?</p>
+				<p><span id="pregOnce">11. ¿Cu&aacute;l es el libro que Joey pone en el congelador cada vez que lo lee?</span></p>
 				<div class="alinearRadio">
-				<input type="radio" id="respOnceOpc1" name="respOnce" value="incorrecta" />
+				<input type="radio" name="respOnce" value="incorrecta" />
 				<label for="respOnceOpc1">Mujercitas</label><br>
 
-				<input type="radio" id="respOnceOpc2" name="respOnce" value="incorrecta" />
+				<input type="radio" name="respOnce" value="incorrecta" />
 				<label for="respOnceOpc2">Cementerio de Animales</label><br>
 
 				<input type="radio" id="respOnceOpc3" name="respOnce" value="correcta" />
 				<label for="respOnceOpc3">El Resplandor</label><br>
 
-				<input type="radio" id="respOnceOpc4" name="respOnce" value="incorrecta" /> 
+				<input type="radio" name="respOnce" value="incorrecta" /> 
 				<label for="respOnceOpc4">La Cosa</label><br>
 				</div>
 				<div style="clear: both"></div> 
 
 				<!-- Pregunta12-->
 				<img src="preg12.png" alt="PreguntaNumero12"><br>
-				<p>12. ¿Cu&aacute;l de los seis amigos no sabe andar en Bicicleta? Seleccione la opci&oacute;n correcta de la Lista: </p>
+				<p><span  id="pregDoce">12. ¿Cu&aacute;l de los seis amigos no sabe andar en Bicicleta?Seleccione la opci&oacute;n correcta de la Lista:</span></p>
 				<select name="respDoce">
 					<option value="incorrecta">Chandler</option>
 					<option value="incorrecta">Joey</option>
 					<option value="incorrecta">Monica</option>
-					<option id="respDoce" value="correcta" selected>Phoebe</option>
+					<option id="respDoce" value="correcta">Phoebe</option>
 					<option value="incorrecta">Ross</option>
-					<option value="incorrecta">Rachel</option>
+					<option value="incorrecta"selected>Rachel</option>
 				</select><br>
 
 				
-				<p class="submitFinal"><input type="submit" value="Finalizar Cuestionario"></p>
+				<p><input type="button" id="finCuestionario" value="Finalizar Cuestionario"></p>
 
 
 			</form>
+
+
+			<script>
+
+				"use strict"
+
+				var respUnoCorrecta = "Barry";
+				var respSieteCorrecta = "Kiwi";
+				var respNueveCorrecta = "Grecia";
+				var cuantosPuntos = 0;
+
+				document.getElementById("finCuestionario").onclick = function () {
+
+					//pregunta 1,7 y 9//
+					var compare = document.getElementById("respUno").value;
+
+					if(compare.toLowerCase() == respUnoCorrecta.toLowerCase()){
+						document.getElementById("pregUno").style.backgroundColor = "green";
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregUno").style.backgroundColor = "red";
+
+					}
+
+					compare = document.getElementById("respSiete").value;
+
+					if(compare.toLowerCase() == respSieteCorrecta.toLowerCase()){
+						document.getElementById("pregSiete").style.backgroundColor = "green";
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregSiete").style.backgroundColor = "red";
+
+					}
+
+					compare = document.getElementById("respNueve").value;
+
+					if(compare.toLowerCase() == respNueveCorrecta.toLowerCase()){
+						document.getElementById("pregNueve").style.backgroundColor = "green";
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregNueve").style.backgroundColor = "red";
+
+					}
+
+					//pregunta 2,5,11 //
+
+					compare = document.getElementById("respDosOpc4").checked;
+
+					if(compare){
+
+						document.getElementById("pregDos").style.backgroundColor = "green";
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregDos").style.backgroundColor = "red";
+
+					}
+
+					compare = document.getElementById("respCincoOpc1").checked;
+					
+					if(compare){
+
+						document.getElementById("pregCinco").style.backgroundColor = "green";
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregCinco").style.backgroundColor = "red";
+
+					}
+
+
+					compare = document.getElementById("respOnceOpc3").checked;
+					
+					if(compare){
+
+						document.getElementById("pregOnce").style.backgroundColor = "green";
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregOnce").style.backgroundColor = "red";
+
+					}		
+					
+					//pregunta 3,6,10 //
+
+					compare = document.getElementById("respTres").checked;
+					
+					if(compare){
+
+						document.getElementById("pregTres").style.backgroundColor = "green";
+						document.getElementById("pregTresOpc").style.backgroundColor = "green";
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregTres").style.backgroundColor = "red";
+						document.getElementById("pregTresOpc").style.backgroundColor = "red";
+
+					}
+
+					compare = document.getElementById("respSeis").checked;
+					
+					if(compare){
+
+						document.getElementById("pregSeis").style.backgroundColor = "green";
+						document.getElementById("pregSeisOpc").style.backgroundColor = "green";
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregSeis").style.backgroundColor = "red";
+						document.getElementById("pregSeisOpc").style.backgroundColor = "red";
+
+					}		
+
+					compare = document.getElementById("respDiez").checked;
+					
+					if(compare){
+
+						document.getElementById("pregDiez").style.backgroundColor = "green";
+						document.getElementById("pregDiezOpc").style.backgroundColor = "green";
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregDiez").style.backgroundColor = "red";
+						document.getElementById("pregDiezOpc").style.backgroundColor = "red";
+
+					}
+
+
+					//pregunta 4,8,12 //
+
+					compare = document.getElementById("respDoce").selected;
+					
+					if(compare){
+
+						document.getElementById("pregDoce").style.backgroundColor = "green";
+						
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregDoce").style.backgroundColor = "red";
+						
+
+					}
+
+					compare = document.getElementById("respOcho").selected;
+					
+					if(compare){
+
+						document.getElementById("pregOcho").style.backgroundColor = "green";
+						
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregOcho").style.backgroundColor = "red";
+						
+
+					}
+
+					compare = document.getElementById("respCuatro").selected;
+					
+					if(compare){
+
+						document.getElementById("pregCuatro").style.backgroundColor = "green";
+						
+						 
+						cuantosPuntos += 100;
+
+					}else{
+
+
+						document.getElementById("pregCuatro").style.backgroundColor = "red";
+						
+
+					}
+
+
+					if(cuantosPuntos>=0 && cuantosPuntos<=400){
+
+						alert("Usted deberia ver la serie nuevamente, obtuvo un total de: " + cuantosPuntos + " puntos.");
+
+					}else if(cuantosPuntos>=500 && cuantosPuntos<=900){
+
+						alert("Usted vio la serie pero... es realmente un FAN? obtuvo un total de: " + cuantosPuntos + " puntos.");
+
+					}else{
+
+						alert("USTED ES UN FAN DE LA SERIE! Obtuvo un total de: " + cuantosPuntos + " puntos.");
+
+					}
+
+
+
+				}
+
+
+				
+
+			</script>
 
 			
 	
